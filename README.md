@@ -14,6 +14,7 @@ Some of the features of this projects:
 
 
 All songs Data is Stored in JSON object(Planning to use dataBase in near future)
+Song files located in songs folder
 Different scripts files are being used for different ui component along with seperate CSS files
 
 For ui fonts, google fonts has been integrated.
