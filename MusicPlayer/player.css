@@ -1,0 +1,285 @@
+.playerWrapper {
+  /* position: relative; */
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "playerHeaderWrapper"
+    "playerMainWrapper";
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid violet; */
+}
+
+.playerHeaderWrapper {
+  grid-area: playerHeaderWrapper;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 0px 25px;
+  /* border: 1px solid yellow; */
+}
+#playerHeaderWrapperText {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0px 0px 0px 0px;
+}
+.playerMainWrapper {
+  grid-area: playerMainWrapper;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.playerComponent {
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0px 0px 0px 20px;
+  display: grid;
+  grid-template-rows: 60% 20% 20%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "nowPlayingSongsContainer"
+    "nowPlayingProgessWrapper"
+    "nowPlayingButtonWrapper";
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+  -moz-box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+  box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+}
+.nowPlayingSongsContainer {
+  position: relative;
+  grid-area: nowPlayingSongsContainer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* padding: 20px 0px 20px 0px; */
+}
+.currSongArtDiv {
+  /* border: 1px solid blue; */
+  /* width: 50%; */
+  height: 60%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+  -moz-box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+  box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+
+  border-radius: 8px;
+}
+#imgTag-curr {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.currSongNameContainer {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#currSongName {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 550;
+  margin: 0px 0px 0px 0px;
+  color: black;
+}
+#currArtistName {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 450;
+  margin: 0px 0px 0px 0px;
+  color: slategray;
+}
+
+.nowPlayingProgessWrapper {
+  position: relative;
+  grid-area: nowPlayingProgessWrapper;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.upperDiv {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.lowerDiv {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.startTimeDiv {
+  position: relative;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.endTimeDiv {
+  position: relative;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.timeText {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 450;
+  margin: 0px 0px 0px 0px;
+  color: slategray;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 60%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  position: relative;
+  width: 80%;
+  height: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(128, 128, 128, 0.432);
+  border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #bd7cbd;
+  cursor: pointer;
+  transform: translateY(-3.5px);
+}
+
+.nowPlayingButtonWrapper {
+  position: relative;
+  grid-area: nowPlayingButtonWrapper;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+#pausePlayIconDiv {
+  border: 2px solid slategray;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.fbiconDiv {
+  /* border: 1px solid black; */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#playPauseIcon {
+  width: 60%;
+  height: 60%;
+  cursor: pointer;
+  color: slategray;
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fIcon {
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+#bIcon {
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+.progressTrack {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  /* border: 1px solid black; */
+  background-color: #36333618;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.progressFill {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  background-color: #bd7cbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progressFill::after {
+  position: absolute;
+  content: "";
+  background-color: #bd7cbd;
+  width: 8px;
+  height: 8px;
+  right: -7px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+}

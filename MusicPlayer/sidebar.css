@@ -1,0 +1,54 @@
+.sideBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  grid-area: sideBar;
+  border: 1px solid rgba(93, 94, 93, 0.158);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding-top: 0%;
+}
+.categoryDiv {
+  width: 90%;
+  height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.041);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+  margin: 5px 0px 5px 0px;
+}
+#sidebarIcon {
+  margin-right: 10px;
+  /* color: #860d8663; */
+}
+#categorydiv-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  /* color: rgba(247, 41, 41, 0.527); */
+}
+
+#currActiveCategory {
+  color: #860d868e;
+}
+.logoDiv {
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+#appLogo {
+  width: auto;
+  height: 100%;
+  /* border: 1px solid black; */
+  margin-left: 10px;
+}

@@ -1,0 +1,290 @@
+.songsListWrapper {
+  /* position: relative; */
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "songsHeadingWrapper"
+    "songsListContainer";
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* border: 1px solid violet; */
+  width: 100%;
+  height: 100%;
+}
+.songsHeadingWrapper {
+  grid-area: songsHeadingWrapper;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 0px 6%;
+  /* border: 1px solid blue; */
+}
+#songsHeadingWrapperText {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.songsListContainer {
+  grid-area: songsListContainer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  /* padding: 20px 0px 20px 0%; */
+  /* margin-left: 10%; */
+  box-sizing: border-box;
+}
+
+.songsListContainer::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0);
+  height: 4px;
+  width: 5px;
+}
+.songsListContainer::-webkit-scrollbar-track {
+  background-color: rgb(231, 228, 228);
+  background-color: rgba(231, 228, 228, 0.062);
+  width: 2px;
+}
+.songsListContainer::-webkit-scrollbar-thumb {
+  background-color: #860d8663;
+  border-radius: 4px;
+}
+
+.songWrapper {
+  width: 90%;
+  height: 50px;
+  min-height: 50px;
+  background-color: white;
+  -webkit-box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+  -moz-box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+  box-shadow: -3px 7px 30px -20px rgba(99, 96, 99, 1);
+
+  margin: 5px 0px 5px 0px;
+  border-radius: 8px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: minmax(0, 0.3fr) 50px minmax(0, 1fr) minmax(0, 1fr) minmax(
+      0,
+      0.3fr
+    );
+  grid-template-rows: 100%;
+  grid-template-areas: "songNoDiv songArtDiv songNameDiv songArtistDiv songDurationDiv";
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.songNoDiv {
+  grid-area: songNoDiv;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+.songNoDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 450;
+  margin-right: 5px;
+  color: slategray;
+}
+.songArtDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: songArtDiv;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+#imgTag-SL {
+  display: flex;
+  position: relative;
+  height: 75%;
+  width: 75%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+  -moz-box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+  box-shadow: -3px 7px 43px -10px rgba(99, 96, 99, 1);
+}
+.songNameDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: songNameDiv;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 1px;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+.songNameDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 450;
+  color: black;
+  letter-spacing: 0.3px;
+  backface-visibility: hidden;
+  box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
+  display: box;
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  overflow: hidden !important;
+}
+
+.songArtistNameDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: songArtistDiv;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  padding-right: 5px;
+  padding-left: 10px;
+}
+.songArtistNameDiv::-webkit-scrollbar {
+  display: none;
+}
+.songArtistNameDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 450;
+  color: slategray;
+  letter-spacing: 0.3px;
+  width: 100%;
+  backface-visibility: hidden;
+  box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
+  display: box;
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  overflow: hidden !important;
+  letter-spacing: 0.3px;
+  margin-left: 5px;
+
+  /* border: 1px solid black; */
+}
+
+.songDurationDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: songDurationDiv;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+.songDurationDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.activeSongClass {
+  border: 1px solid red;
+}
+
+/* __________________________________________ */
+
+.hideSvg {
+  display: none;
+}
+.showSvg {
+  display: flex;
+}
+
+#equalizer {
+  position: relative;
+  /* left: 50%; */
+  /* top: 2em; */
+  width: 20px;
+
+  /* height: 20px; */
+  /* border: 1px solid red; */
+}
+
+#bar1 {
+  animation: bar1 1.2s infinite linear;
+}
+
+#bar2 {
+  animation: bar2 0.8s infinite linear;
+}
+
+#bar3 {
+  animation: bar3 1s infinite linear;
+}
+
+#bar4 {
+  animation: bar4 0.7s infinite linear;
+}
+
+@keyframes bar1 {
+  0% {
+    height: 2px;
+  }
+  50% {
+    height: 7px;
+  }
+  100% {
+    height: 2px;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    height: 5px;
+  }
+  40% {
+    height: 1px;
+  }
+  80% {
+    height: 7px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes bar3 {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 7px;
+  }
+}
+
+@keyframes bar4 {
+  0% {
+    height: 2px;
+  }
+  50% {
+    height: 7px;
+  }
+  100% {
+    height: 2px;
+  }
+}

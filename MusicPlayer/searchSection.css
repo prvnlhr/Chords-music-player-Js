@@ -1,0 +1,176 @@
+.searchWrapper {
+  position: absolute;
+  width: 95%;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  /* background-image: linear-gradient(0deg, #eee4ee 41%, #f9ebe4 84%); */
+  top: 10%;
+  right: 0%;
+  margin: 0px auto 0px auto;
+  left: 0px;
+  z-index: 3;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 0px 10px 10px;
+  overflow-y: scroll;
+  -webkit-box-shadow: -7px -3px 33px -20px rgba(99, 96, 99, 0.99);
+  -moz-box-shadow: -7px -3px 33px -20px rgba(99, 96, 99, 0.99);
+  box-shadow: -7px -3px 33px -20px rgba(99, 96, 99, 0.99);
+  border-radius: 8px;
+
+  /* border-left: 1px solid rgba(73, 71, 71, 0.062);
+  border-right: 1px solid rgba(73, 71, 71, 0.062);
+  border-bottom: 1px solid rgba(73, 71, 71, 0.062); */
+}
+.searchWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.searchItemWrapper {
+  width: 58%;
+  height: 50px;
+  min-height: 50px;
+  /* border: 1px solid black; */
+
+  /* background-color: white; */
+
+  margin: 5px 0px 5px 0px;
+  /* border-radius: 8px; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+  display: grid;
+  grid-template-columns: minmax(0, 0.3fr) 50px minmax(0, 1fr) minmax(0, 1.5fr) minmax(
+      0,
+      0.3fr
+    );
+  grid-template-rows: 100%;
+  grid-template-areas: "noDiv artDiv nameDiv artistNameDiv typeName";
+  padding-right: 20px;
+  cursor: pointer;
+  /* box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07); */
+}
+.searchItemWrapper:hover {
+  background-color: #eee4ee;
+  border-bottom: 1px solid transparent;
+}
+.noDiv {
+  grid-area: noDiv;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+.noDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 450;
+  margin-right: 5px;
+  color: slategray;
+}
+.artDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: artDiv;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+#imgTag-search-div {
+  display: flex;
+  position: relative;
+  height: 75%;
+  width: 75%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.nameDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: nameDiv;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
+  overflow: hidden;
+
+  /* border: 1px solid black; */
+}
+.nameDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 450;
+  color: black;
+  letter-spacing: 0.3px;
+  backface-visibility: hidden;
+  box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
+  display: box;
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  overflow: hidden !important;
+}
+
+.artistNameDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: artistNameDiv;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  padding-right: 10px;
+}
+.artistNameDiv::-webkit-scrollbar {
+  display: none;
+}
+.artistNameDiv p {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 450;
+  color: slategray;
+  letter-spacing: 0.3px;
+  width: 100%;
+  backface-visibility: hidden;
+  box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
+  display: box;
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  overflow: hidden !important;
+
+  /* border: 1px solid black; */
+}
+
+.typeName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: typeName;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+.typeName p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 450;
+  color: gray;
+}
